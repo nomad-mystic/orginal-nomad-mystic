@@ -1,0 +1,11 @@
+/* line 5, ../components/sass/styles.scss */
+body {
+  background: #fff; }
+
+/* line 9, ../components/sass/styles.scss */
+nav {
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }

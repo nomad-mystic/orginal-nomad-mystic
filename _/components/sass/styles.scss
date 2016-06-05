@@ -1,0 +1,1417 @@
+/*
+ Theme Name:   SuperSimple-Child 
+ Author:       Keith Murphy
+ Template:     supersimple
+*/
+
+
+
+/*------brings in parent theme styles-----*/
+@import url('../supersimple/style.css');
+
+/*
+
+font-family: 'Lobster Two', Arial, sans-serif;
+main green color rgba(45,139,77,.8) #2D8B4D
+light purple      rgba(161,52,99    #A13463
+dark purple           rgba(103,3,47)     103–3–47   #67032F
+med purple                  rgba(192,61,118
+
+
+Welcome to Custom CSS!
+
+*/
+/*------variables----*/
+$maingreen: rgba(45,139,77,.8);
+$purplel: 	rgba(161,52,99,.8);
+$purplem:	rgba(103,3,47,.8);
+$purpled:	rgba(192,61,118,.8);
+$font-stack: 'Lobster Two', Arial, sans-serif;
+
+/*-----end variables------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------end reset---------*/
+
+/*-------------test-*/
+#res {
+	width: 50%;
+}
+
+/*-----------general settings---------------*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+html {
+	background: black;
+}
+
+body {
+	width: 100%;
+	//background: rgba(45,139,77,.8);
+/*background: url(http://localhost/nomadmystics/wp-content/uploads/2014/08/tree1.png) no-repeat bottom right scroll;
+	background: rgba(103,3,47,.8);
+	-webkit-transition: background 5s ease-in .2s, background 5s ease-out .2s;
+	-moz-transition: background 10s ease-in-out .5s;
+	transition: background 10s ease-in-out .5s;*/
+/*--------------------------------------------------------------------------animation-*/
+	animation: changebody 17s ease-in-out 3s infinite alternate;
+}
+
+h2.pageheader {
+	font-family: $font-stack;
+	font-size: 2em;
+	padding: 1em;
+	background: $maingreen;
+	border: solid 3px rgba(0,0,0,.4);
+	border-radius: 25px 0;
+	color: white;
+}
+.current-menu-item a {
+	color: $maingreen !important;
+	text-decoration: underline !important;
+}
+.current-menu-item a:hover {
+	color: black !important;
+}
+.current-menu-item .sub-menu a {
+	color: black !important;
+	text-decoration: none !important;
+}
+.current-menu-item .sub-menu a:hover {
+	
+	color: black !important;
+}
+#wrapper {
+	max-width: 110%;
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.centerit {
+	margin: 0 auto;
+}
+
+.entry-footer {
+	display: none;
+}
+
+.entry-meta {
+	display: none;
+}
+
+.format-standard {
+	border-bottom: none;
+}
+
+/*----turns off border for posts----*/
+/*-----------end general settings--------------*/
+/*-------------------------------------------header area----------------*/
+header {
+	margin: 0;
+}
+
+#header {
+/*background: url(http://nomadmystic.com/wp-content/uploads/2014/08/headerpic2.png) no-repeat 50% 35%;*/
+	margin: -22% auto;
+	padding: 0 0 20%;
+	width: 100%;
+/*----------------------------------------------animation--------------------------------
+	-webkit-animation: headbackground 7s ease 1s;
+	animation: headbackground 7s ease 1s;*/
+}
+/*----only on the home page----*/
+.blog #backgroundheader {
+	animation: backgroundheader 3s linear 1;
+}
+#backgroundheader {
+	background: rgba(0,0,0,.8) no-repeat center right;
+	padding: 2%;
+	margin: -9% 0 0 15%;
+	width: 75%;
+	border-radius: 25px 0;
+	border: solid 1px rgba(255,255,255,1);
+}
+/*----only on the home page----*/
+.blog #backgroundheader2 {
+	animation: backgroundheader2 2s linear 1;
+}
+#backgroundheader2 {
+	background: rgba(45,139,77,.8);
+	width: 45%;
+	margin: -10% 0 0 50%;
+	padding: 2%;
+	border-radius: 0 25px;
+	border: solid 2px rgba(0,0,0,.8);
+}
+/*------------background image move and animation-----*/
+.back1 {
+	border-radius: 25px 0;
+	background: $maingreen;
+	padding: 5%;
+}
+
+
+
+
+#site-title {
+	color: black;
+	padding: 35% 0 0 2%;
+	border: none;
+	border-radius: 2px 25px 0 25px;
+ 	h1 {
+/*------------------------------------------------------------animation-*/
+	animation: headerchange 5s 0 1 ease-in;
+	}
+
+	h1 a {
+	color: black;
+	margin: -10% 0 0;
+	background: rgba(255,255,255,.5);
+	border-radius: 2px 25px 0 25px;
+	padding: 1% 2%;
+	font-family: 'Lobster Two', cursive;
+	font-size: 1.75em;
+	}
+
+	a {
+	color: black;
+	margin: -10% 0 0;
+	background: rgba(255,255,255,.5);
+	border-radius: 2px 25px 0 25px;
+	padding: 1% 2%;
+	font-family: 'Lobster Two', cursive;
+	}
+}/*----end sitetitle---*/
+#search {
+	display: none;
+}
+
+#menu {
+	border: none;
+	margin: 13% 0 0;
+/*----turned off little line-----*/
+}
+
+.menu-main-container {
+	background: rgba(255,255,255,.5);
+	margin: 2% 5% 0;
+	border-radius: 2px 2px 20px 20px;
+	font-family: 'Lobster Two', cursive;
+	border: solid rgba(0,0,0,.8) 1px;
+
+}
+
+.menu-main-container ul {
+}
+
+.menu-main-container ul li a {
+	color: black;
+	margin: 0 0 0 2%;
+	padding: .5%;
+	font-family: 'Lobster Two', cursive;
+}
+#menu-main ul.sub-menu #menu-item-813,
+#menu-main ul.sub-menu #menu-item-1014,
+#menu-main ul.sub-menu #menu-item-10 {
+	margin: 5% 0;
+}
+#menu-main ul.sub-menu #menu-item-813 a, 
+#menu-main ul.sub-menu #menu-item-1014 a,
+#menu-main ul.sub-menu #menu-item-10 a  {
+/* this is for the sub menu */
+	padding: 5%;
+	border-radius: 15px 0 ;
+	margin: 5% 0 0 5%;
+	color: black;
+	font-size: 1em;
+	border: solid rgba(0,0,0,.5) 1px;
+	-webkit-transition: background ease 1s ;
+        transition: background ease 1s ;
+}
+#menu-main ul.sub-menu #menu-item-813 a:hover, 
+#menu-main ul.sub-menu #menu-item-1014 a:hover,
+#menu-main ul.sub-menu #menu-item-10 a:hover  {
+	background: rgb(192,61,118);
+	-webkit-transition: background ease 1s ;
+        transition: background ease 1s ;
+}
+
+#menu ul li a {
+	padding: .5em 1em;
+	border-radius: 0 15px;
+	color: black;
+	transition: background ease .5s ;
+}
+
+
+#menu ul li:first-child {
+	margin-left: 5%;
+}
+#menu ul li a:hover {
+/* for the hover style for nav*/
+	border-radius: 0 15px;
+	background: rgba(192,61,118,.8);
+	color: black;
+        transition: background ease .5s ;
+}
+#menu ul li a:visited {
+	color: black;
+}
+#menu ul li a:active {
+	color: black;
+}
+/* --------------------------------------------content*/
+#post-103 {
+/* removes post */
+}
+
+#comments {
+	display: none;
+/* removes post */
+}
+
+.post-edit-link {
+	display: none;
+/* removes post */
+}
+
+.entry-title {
+	display: none;
+/* removes post */
+}
+
+#content {
+	margin: 5% 0 0 5%;
+	float: left;
+	width: 58%;
+	footer #footer {
+		display: none !important;
+	}
+}
+
+
+.entry-title {
+	background: transparent;
+}
+
+.entry-content {
+/*--odd this only affects the porfiolo page main content------*/
+}
+/*------this is for the home page----*/
+.blog {
+	.homePageh2 {
+		border-radius: 25px 0;
+		font-size: 2em;
+		padding: 1em;
+		width: 70%;
+		border: rgba(0,0,0,.4) solid 3px;
+		color: white;
+		font-family: $font-stack;
+		background: $maingreen;
+	}
+	.menu-main-container {
+/*--------------------------------------------animation-*/
+		animation: navchange 3s ease-in;
+	}
+}
+/*-----------------------------------------for the portcontent-----*/
+#post-8 {
+		width: 100%;
+	}
+/*this is for the h1 starting the pages*/
+#portwrapper {
+	
+	border-radius: 0 10% 0 10%;
+	margin: 0;
+}
+
+#portwrapper h1 {
+	font-family: 'Lobster Two', sans-serif ;
+	font-size: 2.5em;
+	color: white;
+	padding: 5% 0 5% 5%;
+	border-radius: 25px 0;
+	background: rgba(9,9,9,.5);
+	width: 90%;
+	border: white 3px solid;
+}
+
+.portcontent {
+	background: rgba(0,0,0,.5);
+	padding: 1% 0 0;
+	margin: 4% 5% 0;
+	border-radius: 25px 0 25px 0;
+	width: 40%;
+	float: left;
+	border: white 2px solid;
+}
+
+.portcontent figure {
+}
+
+.portcontent img {
+	display: block;
+	width: 90%;
+	margin: 2% auto !important;
+	border-radius: 10px 0;
+	border: solid 1px rgba(0,0,0,.5);
+}
+
+.portcontent figcaption {
+	text-align: center;
+	color: white;
+	margin: 0;
+	padding: 2%;
+}
+
+.portcontent2 {
+	background: rgba(0,0,0,.5);
+	padding: 1% 0 0;
+	margin: 4% 0 0;
+	border-radius: 25px 0 25px 0;
+	width: 40%;
+	float: left;
+	border: white 2px solid;
+}
+
+.portcontent2 img {
+	display: block;
+	width: 90%;
+	margin: 2% auto;
+	border-radius: 10px 0;
+	border: solid 1px rgba(0,0,0,.5);
+}
+
+.portcontent2 figcaption {
+	text-align: center;
+	color: white;
+	margin: 0;
+	padding: 2%;
+}
+
+.breakpoint {
+	background: rgba(45,139,77,.8);
+	font-family: 'Lobster Two';
+	font-size: 2em;
+	border-radius: 0 25px 0 25px;
+	padding: 4% 0;
+	width: 60%;
+	margin: 2% 0 0 30%;
+	border: solid rgba(0,0,0,.4) 2px;
+}
+
+.breakpoint h2 {
+	margin: 0 0 0 10%;
+	color: white;
+}
+
+/*------------------------------------------for the school stuff-------------------*/
+.breakpoint2 {
+	background: rgba(45,139,77,.8);
+	font-family: 'Lobster Two';
+	font-size: 1.5em;
+	border-radius: 0 25px 0 25px;
+	padding: 4% 0;
+	width: 90%;
+	margin: 2% auto;
+	border: solid rgba(0,0,0,.4) 2px;
+}
+
+.breakpoint2 h2 {
+	margin: 0 0 0 5%;
+	color: white;
+	text-align: center;
+	font-size: 2.5em;
+}
+
+#portwrapper2 {
+	margin: 0 auto;
+	float: none;
+	width: 100%;
+}
+
+#portwrapper2 .portcontent2 {
+	margin: 0 0 0 2%;
+	
+}
+
+#portwrapper2 .portcontent {
+	margin: 0 0 3% 10%;
+}
+
+/*------------------------endschool stuff--------*/
+/*---------------#schprojectwrap ----school projects assignments------------*/
+#schprojectwrap .ui-state-focus { outline: none;}
+#schprojectwrap {
+	width: 80%;
+}
+#schprojectwrap h1 {
+  font-family: 'Lobster Two', Arial, sans-serif;
+  font-size: 3em;
+  color: white;
+  background: rgba(103, 3, 47, 0.8);
+  border-radius: 25px 0;
+  border: rgba(0, 0, 0, 0.5) solid 2px;
+  padding: 3%;
+  margin: 2%  0 4% 0; }
+
+
+#showcase h2 {
+  font-family: 'Lobster Two', Arial, sans-serif;
+  font-size: 2em;
+  color: black;
+  background: rgba(45, 139, 77, 0.8);
+  border: solid rgba(0, 0, 0, 0.4) 2px;
+  border-radius: 25px 0;
+  padding: 3% 2%; 
+  cursor: pointer;
+}
+
+#showcase h4 {
+  font-family: 'Lobster Two', Arial, sans-serif;
+  font-size: 1.75em;
+  background: rgba(45, 139, 77, 0.8);
+  border-radius: 15px 0;
+  border: rgba(9, 9, 9, 0.8) solid 2px;
+  padding: 2%;
+  margin: 4% 0 4% 2%;
+  width: 70%;
+  color: white; 
+  cursor: pointer;
+}
+
+#showcase li {
+  background: rgba(161, 52, 99, 0.8);
+  border-radius: 15px 0;
+  border: rgba(0, 0, 0, 0.5) solid 2px;
+  padding: 1em;
+  cursor: pointer;
+  -webkit-transition: border 2s ease;
+          transition: border 2s ease;
+  -webkit-transition: background 1s ease;
+          transition: background 1s ease; }
+
+#showcase li:hover {
+  background: rgba(103, 3, 47, 0.8);
+  border: rgba(161,52,99,.8) solid 2px;
+  -webkit-transition: border 2s ease;
+          transition: border 2s ease; 
+  -webkit-transition: background 1s ease;
+          transition: background 1s ease;
+}
+
+#showcase a {
+  color: white;
+  font-size: 1em;
+  font-family: 'Lobster Two', Arial, sans-serif;
+  padding:  0; 
+  margin: 4% 1%;
+  text-align: center;
+  flex-grow: 1;
+}
+
+
+.accworks ul {
+  margin: 3% 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; 
+	flex-wrap: wrap;
+}
+ 
+  .accworks ul li {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    list-style-type: none;
+    font-size: 1.25em;
+    padding: 2% 1%;
+    margin: 2% 1%; }
+ 
+  .accworks ul a {
+    text-decoration: none; 
+}
+#showcase ul.htmllist {
+	margin: 0 auto;
+}
+#showcase ul.htmllist a {
+	flex-grow: 2;
+	margin: 0 auto;
+}
+/*-----------end school projects------------*/
+/*----for fancying up fancybox----*/
+.fancybox-opened .fancybox-skin {
+  border-radius: 25px 0;
+  background: rgba(45, 139, 77, 0.8) ;
+  border: 2px rgba(0, 0, 0, 0.8) solid;  }
+ 
+  .fancybox-skin .fancybox-image {
+    border-radius: 25px 0;
+    border: 1px solid rgba(0, 0, 0, 0.5); }
+
+
+/*----------------freelance---------*/
+#portwrapper3 {
+	width: 100%;
+}
+
+.breakpoint3 {
+	background: rgba(45,139,77,.8);
+	font-family: 'Lobster Two';
+	font-size: 1.5em;
+	border-radius: 0 25px 0 25px;
+	padding: 4% 0;
+	width: 90%;
+	margin: 2% auto;
+	border: solid rgba(0,0,0,.4) 2px;
+}
+
+#portwrapper3 .breakpoint3 h2 {
+	font-family: 'Lobster Two', Arial, sans-serif;
+	color: white;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+#portwrapper3 .portcontent {
+	background: rgba(0,0,0,.5);
+	padding: 1% 0 0;
+	margin: 4% 5% 0;
+	border-radius: 25px 0 25px 0;
+	width: 40%;
+	float: left;
+	border: white 2px solid;
+}
+
+#portwrapper3 .portcontent2 {
+	background: rgba(0,0,0,.5);
+	padding: 1% 0 0;
+	margin: 4% 0 0;
+	border-radius: 25px 0 25px 0;
+	width: 40%;
+	float: left;
+	border: white 2px solid;
+}
+
+/*---------end portcontent------*/
+/*--- this is for the recent works page ----*/
+#post-1032 {
+	.entry-content {
+		width: 80%;
+	}
+	.artpost {
+		p:nth-child(even) {
+			display: none !important;
+	    }
+	}
+}
+/*---------------------------------------------------------posts------------*/
+#postwrappervid p:nth-child(4) {
+	display: none;
+}
+
+#postwrappervid {
+	margin: 0 0 0 2%;
+}
+
+#postwrappervid h2 {
+	width: 90%;
+	font-size: 1.5em;
+	color: white;
+	background: rgba(45,139,77,.8);
+	border-radius: 25px 0 25px;
+	padding: 2% 3%;
+	margin: 3% 0;
+	border: rgba(0,0,0,.4) solid 3px;
+}
+
+#postwrappervid p {
+	background: rgba(161,52,99,1);
+	color: white;
+	padding: 2%;
+	margin: 2% 0;
+	width: 80%;
+	border-radius: 25px 0 25px 0;
+	border: rgba(0,0,0,.4) solid 2px;
+}
+#postwrappervid .videopost p {
+	margin: 0 auto;
+}
+.videopost {
+	width: 70%;
+	border-radius: 0 25px 0 25px;
+	background: rgba(41,99,119,.8);
+	padding: 2% 3%;
+	border: white 3px solid;
+}
+
+.videopost p img {
+	display: block;
+	background: rgba(0,0,0,1);
+	border-radius: 0 25px 0 25px;
+	padding: 3%;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 auto;
+}
+/*---
+#postwrappervid .videopost p img {
+	width: 20%;
+	margin: -60% 40% 0;
+}
+#postwrappervid .videopost p img:nth-child(2):hover {
+	background: red;
+	border-radius: 10px;
+}
+--*/
+/*-----for artist post--------------*/
+#postwrapperart p:nth-child(4) {
+	display: none !important;
+}
+
+#postwrapperart {
+	margin: 0 0 0 2%;
+}
+
+#postwrapperart h2 {
+	width: 90%;
+	font-size: 1.5em;
+	color: white;
+	background: rgba(45,139,77,.8);
+	border-radius: 25px 0 25px;
+	padding: 2% 3%;
+	margin: 3% 0;
+	border: rgba(0,0,0,.4) solid 3px;
+}
+
+#postwrapperart p {
+	background: rgba(161,52,99,1);
+	color: white;
+	padding: 2%;
+	margin: 2% 0;
+	width: 80%;
+	border-radius: 25px 0 25px 0;
+	border: rgba(0,0,0,.4) solid 2px;
+}
+
+.artpost {
+	width: 70%;
+	border-radius: 0 25px 0 25px;
+	background: rgba(41,99,119,.8);
+	padding: 2% 3%;
+	border: white 3px solid;
+}
+
+.artpost img {
+	width: 90%;
+	background: rgba(0,0,0,1);
+	padding: 2%;
+	overflow: hidden;
+	margin: 0 5%;
+	border-radius: 0 25px 0 25px;
+}
+/*-----------------this is for the Resume Page-----*/
+#post-1067 {
+	width: 80%;
+}
+
+.resumepost {
+	width: 80%;
+	border-radius: 0 25px 0 25px;
+	background: rgba(41,99,119,.8);
+	padding: 2% 3%;
+	border: white 3px solid;
+}
+
+.resumepost img {
+	width: 100%;
+	background: rgba(0,0,0,1);
+	padding: 2%;
+	overflow: hidden;
+	margin: 0;
+	border-radius: 0 25px 0 25px;
+}
+/*----------------------------------------------------------end posts-----------------*/
+/*----------------------------------------------------for the photoshop work pages-----------------------------*/
+#photoworkwrapper {
+	width: 80%;
+}
+#photoworkwrapper h1 {
+	background: rgba(45,139,77,.8);
+	border-radius: 25px 0;
+	border: 2px solid rgba(0,0,0,.4);
+	font-family: 'Lobster Two', Arial, sans-serif;
+	font-size: 2.25em;
+	padding: 2%;
+	color: white;
+}
+
+.photowork1 {
+	background: rgba(161,52,99,.8);
+	border-radius: 0 25px;
+	border: 1px solid rgba(255,255,255,.8);
+	float: left;
+	width: 40%;
+	margin: 2%;
+}
+
+.photowork1 img {
+	width: 90%;
+	margin: 4% auto 2%;
+	border: solid 1px rgba(0,0,0,.5);
+	display: block;
+	border-radius: 0 15px;
+}
+
+.photowork1 figcaption {
+	text-align: center;
+	font-size: 1.25em;
+	color: white;
+	padding: 1% 2%;
+}
+
+.photowork2 {
+	background: rgba(161,52,99,.8);
+	border-radius: 0 25px;
+	border: 1px solid rgba(255,255,255,.8);
+	float: left;
+	width: 40%;
+	margin: 2%;
+}
+
+.photowork2 img {
+	width: 90%;
+	border: solid 1px rgba(0,0,0,.5);
+	display: block;
+	margin: 4% auto 2%;
+	border-radius: 0 15px;
+}
+
+.photowork2 figcaption {
+	text-align: center;
+	font-size: 1.25em;
+	color: white;
+	padding: 1% 2%;
+}
+
+/*----------------------------------------------------------------------------------------side bar area------------------*/
+#sidebar {
+	background: rgba(45,139,77,.8);
+	margin: 7% 10% 0 0;
+	border-radius: 25px 0 25px 0;
+	padding: 2%;
+	border: solid 3px rgba(255,255,255,.8);
+	float: right !important;
+	width: 25%;
+}
+
+#socialicons {
+	margin: 0 auto 4%;
+	background: rgba(192,61,118,.8);
+	border-radius: 25px 0;
+	padding: 2%;
+	border: solid 2px rgba(0,0,0,.5);
+}
+
+#socialicons img {
+	display: inline;
+	width: 20%;
+	margin: 0 0 0 5%;
+	padding: 2%;
+}
+
+.sidemusicpost {
+	border-radius: 0 25px 0 25px;
+}
+
+#sidebar p {
+	background: rgba(161,52,99,.8);
+	border-radius: 25px 0;
+	border: rgba(0,0,0,.8) solid 2px;
+	padding: 3% 2%;
+	text-align: center;
+	color: white;
+	font-family: arial, sans-serf;
+	margin: 3% auto 2%;
+}
+
+.widget-area iframe {
+/*for the iframes */
+	background: rgba(0,0,0,1);
+	border-radius: 0 25px 0 25px;
+	padding: 3%;
+	overflow: hidden;
+	border: solid 5px black;
+}
+
+/*--------------------------end of side bar--------------*/
+/*----------------------------------- for footer social Icons---------*/
+#fsocialicons {
+	margin: 2% 0 4% 65%;
+	background: rgba(192,61,118,.8);
+	border-radius: 25px 0;
+	padding: 0;
+	border: solid 2px rgba(0,0,0,.5);
+	width: 30%;
+}
+
+#fsocialicons img {
+	display: inline;
+	width: 20%;
+	margin: 0 0 0 5%;
+	padding: 2%;
+}
+
+/*--------------footer area-----------*/
+#footer {
+	width: 100%;
+	margin: 2% 0 0;
+	background: rgba(45,139,77,.8);
+	border-radius: 25px 25px 0 0;
+	border: solid rgba(0,0,0,.4) 2px;
+}
+#footer ul.menu {
+	display: flex;
+	align-items: center;
+	padding: 2%;
+}
+#footer ul.menu .sub-menu {
+	display: flex;
+}
+#footer .menu li {
+	margin: 0 auto;
+	text-decoration: none;
+	display: flex;
+}
+#footer .menu li a {
+	color: black;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+/*------------------------------end footer-----*/
+/*-------------------------------------------------form contact-------*/
+#wpcf7-f558-p103-o1 {
+	background: rgba(45,139,77,.8);
+	border-radius: 25px 0;
+	border: solid 2px rgba(0,0,0,.8);
+	padding: 2% 0 3% 10%;
+}
+#formwrapper {
+	width: 70%;
+}
+
+#formwrapper h1 {
+	font-size: 2em;
+	background: rgba(9,9,9,.5);
+	color: white;
+	margin: 2% 0 2% 2%;
+	padding: 2%;
+	border-radius: 25px 0;
+	border: solid white 2px;
+}
+
+#formwrapper p {
+	font-size: 1.25em;
+	color: white;
+	font-family: 'Lobster Two', Arial, sans-serif;
+	padding: 1% 0;
+}
+
+#formwrapper input[type="text"] {
+	border-radius: 10px 0;
+	padding: 2%;
+	color: black;
+}
+
+#formwrapper input[type="email"] {
+	border-radius: 0 10px;
+	padding: 2%;
+	color: black;
+}
+
+#formwrapper textarea {
+	border-radius: 0 10px;
+	padding: 2%;
+	color: black;
+}
+
+#formwrapper input[type="submit"] {
+	padding: 1% 2%;
+	border-radius: 10px 0;
+	color: black;
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-ms-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
+#formwrapper input[type="submit"]:hover {
+	background: red;
+	color: white;
+}
+/*-----experimenting with simple nav change----*/
+	/* Setting things up */
+/*
+#content {
+  clear: both;
+  padding-top: 1em;
+}
+
+nav a {
+  color: #fff;
+}
+
+ Important stuff
+
+ul.menu {
+  padding: 0;
+  width: 100%;
+  
+  li {
+    list-style-type: none;
+    display: block;
+    float: left;
+    background: #777;
+    margin: 0;
+    padding: .5em 0;
+    -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box; 
+	  box-sizing: border-box;
+    width: 20%;
+    text-align: center;
+    
+    &:hover {
+      background: #888;
+    }
+  }
+}--*/
+
+a.open-panel, a.close-panel {
+  display: none;
+}
+
+
+/*-------------------------------------------for the media queries---------------------*/
+/*--------------for smart phone-----------------------*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	h1, h2, p {
+		line-height: 1em !important;
+	}
+	/*------for the header and nav area--------------*/
+	#site-title h1 {
+		font-size: 1.25em;
+		padding: 2% 4%;
+		-webkit-animation: none;
+		-moz-animation: none;
+		-o-animation: none;
+		-ms-animation: none;
+		animation: none;
+	}
+	
+	#site-title a {
+		padding: 2% 4%;
+	}
+	
+	#backgroundheader2 {
+		margin-top: -20%;
+	}
+	
+	#backgroundheader {
+		margin-top: -10%;
+	}
+	
+	.menu-main-container {
+		margin-top: 25%;
+		-webkit-animation: none;
+		-moz-animation: none;
+		-o-animation: none;
+		animation: none;
+	}
+	
+	#menu ul li a {
+		font-size: .95em;
+	}
+	
+	/*------------------end header area-----*/
+	#sidebar {
+		display: none;
+	}
+	
+	#content {
+		width: 96% !important;
+		float: none;
+		margin: 5% auto !important;
+	}
+	
+	/*---------------main page content------*/
+	#postwrapperart {
+		margin: 0 auto !important;
+	}
+	
+	#postwrapperart p {
+		width: auto;
+	}
+	
+	#postwrapperart h2 {
+		padding: 4%;
+		margin: 3% 0 3% 4%;
+		line-height: 1em;
+	}
+	
+	.artpost {
+		width: 100%;
+	}
+	
+	.artpost img {
+		margin: 0;
+	}
+	
+	#postwrappervid {
+		margin: 0 auto !important;
+	}
+	
+	#postwrappervid h2 {
+		margin: 3% 0 3% 3%;
+		padding: 4% 3%;
+	}
+	
+	#postwrappervid p {
+		width: auto;
+	}
+	
+	.videopost {
+		width: 100%;
+	}
+	
+	/*-----------------------end main page connet------------*/
+	#fsocialicons {
+		margin: 5% 2% 4% 20% !important;
+	}
+	/*------for contact-----------*/
+	input, textarea {
+		width: 90%;
+	}
+	
+	#formwrapper h1 {
+		padding: 5%;
+	}
+	
+	/*-------------end contact page------------------*/
+	/*----Home Page was Rencent ----*/
+	#post-1032 .entry-content {
+  		width: auto !important;
+	}
+	.pageheader {
+		line-height: 1em !important;
+	}
+	/*------------for the web portfolio page---------------------*/
+	#post-8 {
+		width: 100%;
+	}
+	#portwrapper {
+		width: 100%;
+	}
+	
+	#portwrapper h1 {
+		padding: 5% 0 7% 5%;
+	}
+	
+	.breakpoint {
+		width: 80%;
+		margin: 2% 0 0 10%;
+	}
+	
+	.breakpoint h2 {
+		line-height: 1.1;
+		margin: 0 0 0 7%;
+	}
+	
+	.portcontent {
+		float: none;
+		width: 90%;
+		margin: 2% 0;
+		padding: 1% 2% 0;
+	}
+	
+	.portcontent figcaption {
+		margin: -15% 0 0;
+	}
+	
+	.portcontent2 {
+		float: none;
+		width: 90%;
+		margin: 2% 0;
+		padding: 1% 2% 0;
+	}
+	
+	.portcontent2 figcaption {
+		margin: -15% 0 0;
+	}
+	
+	.breakpoint2 {
+		width: auto;
+		line-height: 1;
+		font-size: 1em;
+		padding: 5% 0;
+	}
+	
+	#portwrapper2 .portcontent {
+		margin: 2% 0;
+		width: 100%;
+	}
+	
+	#portwrapper2 .portcontent2 {
+		margin: 2% 0;
+		width: 100%;
+	}
+	
+	.breakpoint3 {
+		font-size: 1em;
+		padding: 7% 0;
+		width: 100%;
+	}
+	
+	#portwrapper3 .portcontent {
+		margin: 2% 0;
+		width: 100%;
+	}
+	
+	#portwrapper3 .portcontent figure {
+		margin: 0;
+		padding: 2%;
+	}
+	
+	#portwrapper3 .portcontent2 {
+		margin: 2% 0;
+		width: 100%;
+	}
+	
+	#portwrapper3 .portcontent2 figure {
+		margin: 0;
+		padding: 2%;
+	}
+	/*-----experementing for simple testnav change
+	nav {
+    width: 70%;
+    position: absolute;
+    left: -70%;
+    top: 0;
+    height: 100%;
+    background: #777;
+  }
+  
+  
+  ul.menu {
+    border-top: 1px solid #888;
+    display: flex;
+    flex-direction: column;
+    
+    li {
+      float: none;
+      width: 100%;
+      text-align: left;
+      padding: .5em 1em;
+      border-bottom: 1px solid #888;
+    }
+  }
+  a.open-panel, a.close-panel {
+    display: inline;
+  }
+  
+  .close-panel {
+    position: relative;
+    top: .5em;
+    left: 1em;
+  }
+  .openNav #page {
+    left: 0;
+
+    transform: translate3d(70%, 0, 0);
+    transition: transform 500ms ease;
+  }
+  
+  When the panel is closed, transition the page back to the left 
+  #page {
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    transition: transform 500ms ease;
+  }---*/
+
+
+}/*---for small screens----*/
+
+/* ---------------------------------------------------------animations------------------------------*/
+/*---for the change background body----------*/
+@-webkit-keyframes changebody {
+	0% {
+		background: white;
+	}
+	
+	50% {
+		background: rgba(71,0,31,.8);
+	}
+	
+	100% {
+		background: rgba(103,3,47,.8);
+	}
+}
+@keyframes changebody {
+	0% {
+		background: white;
+	}
+	
+	50% {
+		background: rgba(71,0,31,.8);
+	}
+	
+	100% {
+		background: rgba(103,3,47,.8);
+	}
+}
+
+/*----for the animations headerchange---------------*/
+@-webkit-keyframes headerchange {
+	0% {
+		margin-top: -15%;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+@keyframes headerchange {
+	0% {
+		margin-top: -15%;
+	}
+	100% {
+		margin-top: 0;
+	}
+}
+
+/*-------------------------navchange-----------*/
+@-webkit-keyframes navchange {
+	0% {
+		margin-left: 20%;
+		border: none;
+	}
+	
+	100% {
+		margin-left: 5%;
+		border: solid rgba(0,0,0,.8) 1px;
+	}
+}
+@keyframes navchange {
+	0% {
+		margin-left: 20%;
+		border: none;
+	}
+	
+	100% {
+		margin-left: 5%;
+		border: solid rgba(0,0,0,.8) 1px;
+	}
+}
+
+/*this is for more of the header back ground the two cloud in the screen---*/
+@keyframes backgroundheader {
+	0% {
+		margin-left: 40%;
+	}
+	100% {
+		margin-left: 15%;
+	}
+}
+@keyframes backgroundheader2 {
+	0% {
+		margin-left: 75%;
+	}
+	100% {
+		margin-left: 50%;
+	}
+}
+/*--------------------------------------background header change   http://nomadmystic.com/wp-content/uploads/2014/08/headerpic1.png-----------------*/
+@-webkit-keyframes headbackground {
+	0% {
+	}
+	
+	50% {
+	}
+	
+	100% {
+		background: url(http://nomadmystic.com/wp-content/uploads/2014/08/headerpic2.png) no-repeat 50% 30%;
+	}
+}
+
